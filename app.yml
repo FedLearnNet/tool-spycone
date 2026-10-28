@@ -1,0 +1,88 @@
+config:
+  hyperparams:
+  - default: '9606'
+    description: specify the species ID
+    maxValue: null
+    minValue: null
+    name: data_num_species
+    options:
+    - '9606'
+    pattern: null
+    type: CATEGORICAL
+  - default: hierarchical
+    description: Type of clustering algorithm to use
+    maxValue: null
+    minValue: null
+    name: clustering_algorithm
+    options:
+    - dbscan
+    - optics
+    - kmeans
+    - kmedoids
+    - hierarchical
+    pattern: null
+    type: CATEGORICAL
+  - default: '5'
+    description: Number of replicates
+    maxValue: null
+    minValue: '1'
+    name: reps1
+    options: []
+    pattern: null
+    type: INTEGER
+  - default: '9'
+    description: Number of time points
+    maxValue: null
+    minValue: '1'
+    name: timepts
+    options: []
+    pattern: null
+    type: INTEGER
+  - default: '10'
+    description: Number of cluster
+    maxValue: null
+    minValue: '1'
+    name: n_clusters
+    options: []
+    pattern: null
+    type: INTEGER
+  input:
+  - description: time series data values with columns as each sample e.g. the order
+      of the columns should be sample1_rep1, sample1_rep2, sample2_rep1, sample2_rep2
+      and so on….
+    maxValue: null
+    minValue: null
+    name: data
+    required: false
+    shape: null
+    type: CSV
+    tabularSchema:
+      minRows: 1
+      minColumns: 1
+      allowOnlyNumbers: true
+      prohibitedNulls: true
+  - description: list of gene id (can be entrez gene id or ensembl gene id)
+    maxValue: null
+    minValue: null
+    name: gene_ids
+    required: false
+    shape: null
+    type: CSV
+    tabularSchema:
+      allowOnlyNumbers: false
+      prohibitedNulls: true
+  output:
+  - description: ''
+    maxValue: null
+    minValue: null
+    name: image
+    shape: null
+    type: IMAGE
+info:
+  name: tool-spycone
+  slug: tool-spycone
+  type: SELF_LEARNED
+  sourceUrl: https://github.com/FedLearnNet/tool-spycone
+  shortDescription: Analyzes time-course expression and splicing patterns with Spycone
+    and exports clusters and plots.
+  longDescription: null

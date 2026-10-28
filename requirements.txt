@@ -1,0 +1,8 @@
+numpy>=1.26.4,<2
+pandas>=2.2,<3
+git+https://github.com/yollct/spycone.git
+https://github.com/fraenkel-lab/pcst_fast/archive/refs/tags/1.0.7.tar.gz
+
+# Compatible with the NumPy 1.26 scientific stack.
+pyarrow>=14,<20
+statsmodels>=0.14,<0.15
