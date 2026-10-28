@@ -1,4 +1,4 @@
-# tool-spycone
+# spycone
 
 Analyzes time-course expression and splicing patterns with Spycone and exports clusters and plots.
 

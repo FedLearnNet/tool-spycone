@@ -79,8 +79,8 @@ config:
     shape: null
     type: IMAGE
 info:
-  name: tool-spycone
-  slug: tool-spycone
+  name: spycone
+  slug: spycone
   type: SELF_LEARNED
   sourceUrl: https://github.com/FedLearnNet/tool-spycone
   shortDescription: Analyzes time-course expression and splicing patterns with Spycone
